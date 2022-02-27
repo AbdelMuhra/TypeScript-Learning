@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["export type User = unknown;\n\nexport const users: unknown[] = [\n    {\n        name: 'Abdel Ghani Muhra',\n        age: 21,\n        occupation: 'Student'\n    },\n    {\n        name: 'John Danaher',\n        age: 400,\n        occupation: 'Jiu-Jitsu'\n    }\n];\n\nexport function logPerson(user: unknown) {\n    console.log(` - ${user.name}, ${user.age}`);\n}\n\nconsole.log('Users:');\nusers.forEach(logPerson);\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAEO,MAAM,QAAmB;AAAA,EAC5B;AAAA,IACI,MAAM;AAAA,IACN,KAAK;AAAA,IACL,YAAY;AAAA;AAAA,EAEhB;AAAA,IACI,MAAM;AAAA,IACN,KAAK;AAAA,IACL,YAAY;AAAA;AAAA;AAIb,mBAAmB,MAAe;AACrC,UAAQ,IAAI,MAAM,KAAK,SAAS,KAAK;AAAA;AAGzC,QAAQ,IAAI;AACZ,MAAM,QAAQ;",
+  "sourcesContent": ["export type User = unknown;\n\nexport const users: unknown[] = [\n    {\n        name: 'Abdel Ghani Muhra',\n        age: 21,\n        occupation: 'Student'\n    },\n    {\n        name: 'John Danaher',\n        age: 400,\n        occupation: 'Jiu-Jitsu'\n    },\n    {\n        name: 'Gordon Ryan',\n        age: 25,\n        occupation: 'Jiu-Jitsu'\n    }\n];\n\nexport function logPerson(user: unknown) {\n    console.log(` - ${user.name}, ${user.age}`);\n}\n\nconsole.log('Users:');\nusers.forEach(logPerson);\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAEO,MAAM,QAAmB;AAAA,EAC5B;AAAA,IACI,MAAM;AAAA,IACN,KAAK;AAAA,IACL,YAAY;AAAA;AAAA,EAEhB;AAAA,IACI,MAAM;AAAA,IACN,KAAK;AAAA,IACL,YAAY;AAAA;AAAA,EAEhB;AAAA,IACI,MAAM;AAAA,IACN,KAAK;AAAA,IACL,YAAY;AAAA;AAAA;AAIb,mBAAmB,MAAe;AACrC,UAAQ,IAAI,MAAM,KAAK,SAAS,KAAK;AAAA;AAGzC,QAAQ,IAAI;AACZ,MAAM,QAAQ;",
   "names": []
 }

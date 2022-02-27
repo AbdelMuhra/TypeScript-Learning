@@ -10,6 +10,11 @@ export const users: unknown[] = [
         name: 'John Danaher',
         age: 400,
         occupation: 'Jiu-Jitsu'
+    },
+    {
+        name: 'Gordon Ryan',
+        age: 25,
+        occupation: 'Jiu-Jitsu'
     }
 ];
 
