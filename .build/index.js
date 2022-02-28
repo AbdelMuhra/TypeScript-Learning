@@ -1,39 +1,27 @@
-var __defProp = Object.defineProperty;
-var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
-var __export = (target, all) => {
-  __markAsModule(target);
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-__export(exports, {
-  logPerson: () => logPerson,
-  users: () => users
-});
-const users = [
-  {
-    name: "Abdel Ghani Muhra",
-    age: 21,
-    occupation: "Student"
-  },
-  {
-    name: "John Danaher",
-    age: 400,
-    occupation: "Jiu-Jitsu"
-  },
-  {
-    name: "Gordon Ryan",
-    age: 25,
-    occupation: "Jiu-Jitsu"
+var Validation;
+(function(Validation2) {
+  const lettersRegexp = /^[A-Za-z]+$/;
+  const numberRegexp = /^[0-9]+$/;
+  class LettersOnlyValidator {
+    isAcceptable(s) {
+      return lettersRegexp.test(s);
+    }
   }
-];
-function logPerson(user) {
-  console.log(` - ${user.name}, ${user.age}`);
+  Validation2.LettersOnlyValidator = LettersOnlyValidator;
+  class ZipCodeValidator {
+    isAcceptable(s) {
+      return s.length === 5 && numberRegexp.test(s);
+    }
+  }
+  Validation2.ZipCodeValidator = ZipCodeValidator;
+})(Validation || (Validation = {}));
+let strings = ["Hello", "98052", "101"];
+let validators = {};
+validators["ZIP code"] = new Validation.ZipCodeValidator();
+validators["Letters only"] = new Validation.LettersOnlyValidator();
+for (let s of strings) {
+  for (let name in validators) {
+    console.log(`"${s}" - ${validators[name].isAcceptable(s) ? "matches" : "does not match"} ${name}`);
+  }
 }
-console.log("Users:");
-users.forEach(logPerson);
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  logPerson,
-  users
-});
 //# sourceMappingURL=index.js.map
